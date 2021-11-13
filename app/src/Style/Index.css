@@ -24,3 +24,8 @@ body{
 .btn-hp:hover{
     background-color: #9C97C9 !important;
 }
+.btn-hp-active{
+    width: 10rem;
+    background-color: #6B63B5 !important;
+    border-color: #6B63B5 !important;
+}
