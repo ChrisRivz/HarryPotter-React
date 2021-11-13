@@ -2,10 +2,13 @@ body{
     background-color: black;
 }
 .Card-HP{
-    background-color: black !important;
+    background-color: black;
     border: unset !important;
     color: #fff;
     text-align: center;
+}
+.card-header-hp{
+    padding-bottom: 2rem;
 }
 .flex-hp{
     display: flex;
@@ -28,4 +31,11 @@ body{
     width: 10rem;
     background-color: #6B63B5 !important;
     border-color: #6B63B5 !important;
+}
+.Col-skeleton{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.Skaleton{
+background-color: #5C5C5C !important;
 }
