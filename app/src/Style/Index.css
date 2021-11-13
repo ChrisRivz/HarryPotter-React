@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+.Card-HP{
+    background-color: black !important;
+    border: unset !important;
+    color: #fff;
+    text-align: center;
+}
+.flex-hp{
+    display: flex;
+    justify-content: center;
+}
+.flex-hp button{
+    margin-left: 2rem;
+}
+
+.btn-hp{
+    width: 10rem;
+    border-color: #6B63B5 !important;
+    background-color: #5C5C5C !important;
+}
+
+.btn-hp:hover{
+    background-color: #9C97C9 !important;
+}
