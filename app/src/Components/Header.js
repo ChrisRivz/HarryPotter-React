@@ -54,7 +54,7 @@ function Header() {
         <div className="Container-header">
             <Navbar className="nav-hp" bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand className="nav-brand" href="#home">Created by Chris</Navbar.Brand>
+                    <Navbar.Brand className="nav-brand" target="a_blank" rel="noopener noreferrer" href="https://chrisrivz.com/">Created by Chris</Navbar.Brand>
                     <div className="justify-content-end">
                         <ButtonGroup aria-label="Basic example">
                             <Button className="btn-hp" variant="secondary" onClick={handleShow}>Favoritos <FaRegBookmark /></Button>

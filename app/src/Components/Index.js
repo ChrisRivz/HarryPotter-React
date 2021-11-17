@@ -13,11 +13,11 @@ import ContadorContext from '../Context/CountContext';
 function Index() {
 
     async function Axios_Stuent() {
-        let resp = axios.get("http://hp-api.herokuapp.com/api/characters/students")
+        let resp = axios.get("https://hp-api.herokuapp.com/api/characters/students")
         return resp;
     }
     async function Axios_Staff() {
-        let resp = axios.get("http://hp-api.herokuapp.com/api/characters/staff")
+        let resp = axios.get("https://hp-api.herokuapp.com/api/characters/staff")
         return resp;
     }
 
@@ -42,7 +42,7 @@ function Index() {
 
     useEffect(() => {
         const FetchCharacters = () => {
-            fetch("http://hp-api.herokuapp.com/api/characters")
+            fetch("https://hp-api.herokuapp.com/api/characters")
                 .then(response => {
                     response.json()
                         .then(
