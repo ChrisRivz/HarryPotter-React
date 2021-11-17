@@ -6,6 +6,8 @@ import SkeletonComp from './SkeletonComp'
 import axios from 'axios'
 import '../Style/Index.css'
 import CharactersContext from '../Context/CharactersContext';
+import FavoritesContext from '../Context/FavoritesContext';
+import ContadorContext from '../Context/CountContext';
 
 
 function Index() {
@@ -18,13 +20,12 @@ function Index() {
         let resp = axios.get("http://hp-api.herokuapp.com/api/characters/staff")
         return resp;
     }
-    async function Axios_All() {
-        let resp = axios.get("http://hp-api.herokuapp.com/api/characters")
-        return resp;
-    }
+
 
     const [dataStudents, setStudents] = useState([]);
+    const [dataFavorites, setFavorites] = useState([]);
     const [dataType, setdataType] = useState(null);
+    const [count, setCount] = useState(0);
 
     const onStudents = async () => {
         setStudents([]);
@@ -38,12 +39,6 @@ function Index() {
         setStudents(Call_staf.data);
         setdataType("Stafs")
     }
-    const onAll = async () => {
-        setStudents([]);
-        let Call_all = await Axios_All();
-        setStudents(Call_all.data);
-        setdataType("All")
-    }
 
     useEffect(() => {
         const FetchCharacters = () => {
@@ -53,37 +48,42 @@ function Index() {
                         .then(
                             (result) => {
                                 setStudents(result);
-                                setdataType("All")
                             },
                         )
                 })
         }
+
         FetchCharacters();
     }, [])
 
 
     return (
         <div>
-            <CharactersContext.Provider value={[dataStudents, setStudents]}>
-                <Header />
-                <Container>
-                    <Card className="Card-HP">
-                        <Card.Header className="card-header-hp">
-                            <h3>Selecciona tu Filtro</h3>
-                            <Row>
-                                <Col><Button onClick={onAll} className={dataType === "All" ? "btn-hp-active" : "btn-hp"} variant="light">Todos</Button> </Col>
-                                <Col><Button onClick={onStudents} className={dataType === "Students" ? "btn-hp-active" : "btn-hp"} variant="light">Estudiantes</Button> </Col>
-                                <Col><Button onClick={onStafs} className={dataType === "Stafs" ? "btn-hp-active" : "btn-hp"} variant="light">Staff</Button> </Col>
-                            </Row>
-                        </Card.Header>
-                        {
-                            dataStudents.length === 0 ? (<SkeletonComp/>) : (<Student />) 
-                        } 
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Container>
-            </CharactersContext.Provider>
+            <ContadorContext.Provider value={[count, setCount]}>
+                <FavoritesContext.Provider value={[dataFavorites, setFavorites]}>
+                    <CharactersContext.Provider value={[dataStudents, setStudents]}>
+                        <Header />
+                        <Container>
+                            <Card className="Card-HP">
+                                <Card.Header className="card-header-hp">
+                                    <h3>Harry Potter</h3>
+                                    <h3>Selecciona tu Filtro</h3>
+                                    <Row>
+                                        <Col><Button onClick={onStudents} className={dataType === "Students" ? "btn-hp-active" : "btn-hp"} variant="light">Estudiantes</Button> </Col>
+                                        <Col><Button onClick={onStafs} className={dataType === "Stafs" ? "btn-hp-active" : "btn-hp"} variant="light">Staff</Button> </Col>
+                                    </Row>
+                                </Card.Header>
+                                {
+                                    dataStudents.length === 0 ? (<SkeletonComp />) : (<Student />)
+                                }
+                                <Card.Body>
+                                </Card.Body>
+                            </Card>
+                        </Container>
+                    </CharactersContext.Provider>
+                </FavoritesContext.Provider>
+            </ContadorContext.Provider>
+
         </div>
     )
 }

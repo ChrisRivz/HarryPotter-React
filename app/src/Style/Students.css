@@ -1,3 +1,4 @@
+
 .image-hp{
     margin: 0 auto !important;
     margin-top: 1rem !important;
@@ -6,12 +7,7 @@
     margin-bottom: 1rem !important;
     padding-right: 2rem;
 }
-.card-hp{
-    border-radius: 20px !important;
-}
 .col-info{
-    border-top-right-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
     background-color: #fff;
     color: black;
 }
@@ -26,18 +22,24 @@
     font-weight: bold;
 }
 .Gryffindor{
-    background-image: radial-gradient(circle at 120.44% 56.16%, #9b7000 0, #a16700 8.33%, #a65b00 16.67%, #aa4e00 25%, #ac3f00 33.33%, #ae2a00 41.67%, #ae0000 50%, #ad000b 58.33%, #ac0015 66.67%, #aa001f 75%, #a60028 83.33%, #a20033 91.67%, #9c003f 100%);border-top-left-radius: 20px !important;
-    border-bottom-left-radius: 20px !important;
+    background-image: radial-gradient(circle at 120.44% 56.16%, #9b7000 0, #a16700 8.33%, #a65b00 16.67%, #aa4e00 25%, #ac3f00 33.33%, #ae2a00 41.67%, #ae0000 50%, #ad000b 58.33%, #ac0015 66.67%, #aa001f 75%, #a60028 83.33%, #a20033 91.67%, #9c003f 100%);
 }
 .Slytherin{
-    background-image: radial-gradient(circle at 120.44% 56.16%, #807656 0, #797552 6.25%, #72744f 12.5%, #6a724b 18.75%, #606f48 25%, #566d44 31.25%, #496a41 37.5%, #3b663f 43.75%, #29623d 50%, #0d5e3c 56.25%, #005a3d 62.5%, #00563f 68.75%, #005343 75%, #005047 81.25%, #004d4c 87.5%, #004a52 93.75%, #004858 100%);border-top-left-radius: 20px !important;
-    border-bottom-left-radius: 20px !important;
+    background-image: radial-gradient(circle at 120.44% 56.16%, #807656 0, #797552 6.25%, #72744f 12.5%, #6a724b 18.75%, #606f48 25%, #566d44 31.25%, #496a41 37.5%, #3b663f 43.75%, #29623d 50%, #0d5e3c 56.25%, #005a3d 62.5%, #00563f 68.75%, #005343 75%, #005047 81.25%, #004d4c 87.5%, #004a52 93.75%, #004858 100%);
 }
 .Ravenclaw{
     background-image: radial-gradient(circle at 120.44% 56.16%, #5a596c 0, #414364 25%, #222f5b 50%, #001d52 75%, #00094a 100%);border-top-left-radius: 20px !important;
-    border-bottom-left-radius: 20px !important;
 }
 .Hufflepuff{background-image: radial-gradient(circle at 120.44% 56.16%, #fbfeae 0, #f8f29b 12.5%, #f6e587 25%, #f3d673 37.5%, #f0c65e 50%, #edb64a 62.5%, #eca539 75%, #eb962a 87.5%, #ea861f 100%);
-    border-top-left-radius: 20px !important;
-    border-bottom-left-radius: 20px !important;
+}
+.glass-effect{
+    background-color: #CCCCCC !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+.list-group-item{
+background-color: transparent ;
+}
+.pagination{
+    text-align: right !important;
 }

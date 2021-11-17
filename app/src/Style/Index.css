@@ -18,14 +18,17 @@ body{
     margin-left: 2rem;
 }
 
-.btn-hp{
-    width: 10rem;
+.btn-hp, .page-link{
+    width: 10rem !important;
     border-color: #6B63B5 !important;
     background-color: #5C5C5C !important;
+    color: black !important;
+    text-align: center !important;
 }
 
-.btn-hp:hover{
+.btn-hp:hover, .page-link:hover{
     background-color: #9C97C9 !important;
+    color: black !important;
 }
 .btn-hp-active{
     width: 10rem;
@@ -38,4 +41,28 @@ body{
 }
 .Skaleton{
 background-color: #5C5C5C !important;
+}
+.btn-large-modal{
+    width: 100% !important;
+}
+.form-label-hp{
+    padding-bottom: 5px !important;
+    padding-top: 10px  !important;
+}
+.form-check-input:checked {
+    background-color: #9C97C9 !important;
+    border-color: #9C97C9 !important;
+}
+.input-hp{
+    background-color: whitesmoke !important;
+    border: unset !important;
+    border-bottom: .5px solid #A4AAAC !important;
+    height: 4rem !important;
+    font-size: 1.5rem !important;
+}
+.form-control:focus{
+    box-shadow: unset !important;
+}
+.modal-body-hp{
+padding: 4rem !important
 }
